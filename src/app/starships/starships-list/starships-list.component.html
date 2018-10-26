@@ -1,0 +1,35 @@
+<div class="panel">
+  <h2><i class="fa fa-rocket"></i>&nbsp;Starships List</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Model</th>
+      <th scope="col">
+        <input id="filter" placeholder="Filter by name..." class="form-control" type="text" name="filter" [(ngModel)]="filter">
+      </th>
+      <th scope="col">
+        <select name="order" class="form-control" id="orderBy" [(ngModel)]="order">
+          <option class="black" value="asc">ASC</option>
+          <option class="black" value="desc">DESC</option>
+        </select>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let starship of starships  | filterPipe: filter | orderBy: order">
+      <td>{{ starship.name }}</td>
+      <td>{{ starship.model }}</td>
+      <td>
+        <a [routerLink]="[ '/starships/', splitUrl(starship.url) ]">View Details</a>
+      </td>
+      <td></td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button *ngIf="backPage != null" class="btn btn-primary btn-sm" (click)="getStarshipByPage(backPage)">Back</button>
+    <button *ngIf="nextPage != null" class="btn btn-primary btn-sm" (click)="getStarshipByPage(nextPage)">Next</button>
+  </div>
+</div>
+<app-footer></app-footer>

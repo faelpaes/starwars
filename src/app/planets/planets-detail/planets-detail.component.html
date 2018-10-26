@@ -1,0 +1,63 @@
+<div class="container">
+  <h2><i class="fa fa-globe"></i>&nbsp;{{ planets.name }}</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Rotation Period</th>
+      <th scope="col">Orbital Period</th>
+      <th scope="col">Diameter</th>
+      <th scope="col">Climate</th>
+      <th scope="col">Gravity</th>
+      <th scope="col">Terrain</th>
+      <th scope="col">Surface Water</th>
+      <th scope="col">Population</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{ planets.rotation_period }}</td>
+      <td>{{ planets.orbital_period }}</td>
+      <td>{{ planets.diameter }}</td>
+      <td>{{ planets.climate }}</td>
+      <td>{{ planets.gravity }}</td>
+      <td>{{ planets.terrain  }}</td>
+      <td>{{ planets.surface_water  }}</td>
+      <td>{{ planets.population  }}</td>
+    </tr>
+    </tbody>
+  </table>
+  <div *ngIf="residents != null">
+    <h3>Residents</h3>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Birth</th>
+        <th scope="col">Height</th>
+        <th scope="col">Mass</th>
+        <th scope="col">Hair Color</th>
+        <th scope="col">Skin Color</th>
+        <th scope="col">Eye Color</th>
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let resident of residents">
+        <td>{{ resident.name }}</td>
+        <td>{{ resident.gender }}</td>
+        <td>{{ resident.birth_year }}</td>
+        <td>{{ resident.height }}</td>
+        <td>{{ resident.mass }}</td>
+        <td>{{ resident.hair_color }}</td>
+        <td>{{ resident.skin_color }}</td>
+        <td>{{ resident.eye_color  }}</td>
+        <td>
+          <a [routerLink]="['/characters/', splitUrl(resident.url) ]">View Details</a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<app-footer></app-footer>

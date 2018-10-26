@@ -1,0 +1,59 @@
+<div class="container">
+  <h2><i class="fa fa-rocket"></i>&nbsp;{{ starships.name }}</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Model</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Crew</th>
+      <th scope="col">Hyperdrive Rating</th>
+      <th scope="col">Length</th>
+      <th scope="col">Passengers</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{ starships.model }}</td>
+      <td>{{ starships.cost_in_credits }}</td>
+      <td>{{ starships.crew }}</td>
+      <td>{{ starships.hyperdrive_rating }}</td>
+      <td>{{ starships.length }}</td>
+      <td>{{ starships.passengers  }}</td>
+    </tr>
+    </tbody>
+  </table>
+  <div *ngIf="pilots != null">
+    <h3>Pilots</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Birth</th>
+          <th scope="col">Height</th>
+          <th scope="col">Mass</th>
+          <th scope="col">Hair Color</th>
+          <th scope="col">Skin Color</th>
+          <th scope="col">Eye Color</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pilot of pilots">
+          <td>{{ pilot.name }}</td>
+          <td>{{ pilot.gender }}</td>
+          <td>{{ pilot.birth_year }}</td>
+          <td>{{ pilot.height }}</td>
+          <td>{{ pilot.mass }}</td>
+          <td>{{ pilot.hair_color }}</td>
+          <td>{{ pilot.skin_color }}</td>
+          <td>{{ pilot.eye_color  }}</td>
+          <td>
+            <a [routerLink]="['/characters/', splitUrl(pilot.url) ]">View Details</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<app-footer></app-footer>

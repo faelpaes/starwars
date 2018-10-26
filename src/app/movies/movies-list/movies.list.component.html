@@ -1,0 +1,24 @@
+<div class="panel">
+  <h2><i class="fa fa-globe"></i>&nbsp;Movies List</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Release Date</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let movie of movies">
+      <td>{{ movie.title }}</td>
+      <td>{{ movie.release_date }}</td>
+      <td>
+        <a [routerLink]="[ '/films/', splitUrl(movie.url) ]">View Details</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<app-footer></app-footer>
+
+
