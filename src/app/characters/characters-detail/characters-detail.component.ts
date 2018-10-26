@@ -34,10 +34,10 @@ export class CharactersDetailComponent implements OnInit {
 
   ngOnInit() {
     this.character = new Characters();
-    this.getCharacterRoute();
+    this.getCharacters();
   }
 
-  private getCharacterRoute(): void {
+  private getCharacters(): void {
     const id = this.commonService.splitUrl(this.router.url, '/characters/');
     this.service.getCharacterById(id).subscribe(item => {
       this.character = item;
