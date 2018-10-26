@@ -29,4 +29,5 @@ describe('CharactersDetailComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+  
 });

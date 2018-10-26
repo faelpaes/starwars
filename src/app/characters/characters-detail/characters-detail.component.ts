@@ -28,9 +28,7 @@ export class CharactersDetailComponent implements OnInit {
     private planetService: PlanetsService,
     private movieService: MoviesService,
     private commonService: CommonService
-  ) {
-    this.test = 'fa fa-android';
-  }
+  ) { }
 
   ngOnInit() {
     this.character = new Characters();
