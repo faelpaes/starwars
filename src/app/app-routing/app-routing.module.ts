@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import {CharactersListComponent} from '../characters/characters-list/characters.list.component';
-import {CharactersDetailComponent} from '../characters/characters-detail/characters-detail.component';
-import {StarshipsListComponent} from '../starships/starships-list/starships-list.component';
-import {StarshipsDetailComponent} from '../starships/starships-detail/starships-detail.component';
-import {PlanetsListComponent} from '../planets/planets-list/planets-list.component';
-import {PlanetsDetailComponent} from '../planets/planets-detail/planets-detail.component';
-import {MoviesListComponent} from '../movies/movies-list/movies.list.component';
-import {MoviesDetailComponent} from '../movies/movies-detail/movies-detail.component';
-import {AboutComponent} from '../about/about.component';
+import { CharactersListComponent } from '../characters/characters-list/characters.list.component';
+import { CharactersDetailComponent } from '../characters/characters-detail/characters-detail.component';
+import { StarshipsListComponent } from '../starships/starships-list/starships-list.component';
+import { StarshipsDetailComponent } from '../starships/starships-detail/starships-detail.component';
+import { PlanetsListComponent } from '../planets/planets-list/planets-list.component';
+import { PlanetsDetailComponent } from '../planets/planets-detail/planets-detail.component';
+import { MoviesListComponent } from '../movies/movies-list/movies.list.component';
+import { MoviesDetailComponent } from '../movies/movies-detail/movies-detail.component';
+import { AboutComponent } from '../about/about.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'characters', pathMatch: 'full' },

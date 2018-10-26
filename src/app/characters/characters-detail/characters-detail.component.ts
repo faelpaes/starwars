@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
-import {Characters} from '../characters';
-import {CharactersService} from '../characters.service';
-import {Species} from '../species';
-import {Planets} from '../../planets/planets';
-import {PlanetsService} from '../../planets/planets.service';
-import {MoviesService} from '../../movies/movies.service';
-import {Movies} from '../../movies/movies';
-import {CommonService} from '../../common/common.service';
+import { Characters } from '../characters';
+import { CharactersService } from '../characters.service';
+import { Species } from '../species';
+import { Planets } from '../../planets/planets';
+import { PlanetsService } from '../../planets/planets.service';
+import { MoviesService } from '../../movies/movies.service';
+import { Movies } from '../../movies/movies';
+import { CommonService } from '../../common/common.service';
 
 @Component({
   selector: 'app-characters-detail',
@@ -32,7 +32,7 @@ export class CharactersDetailComponent implements OnInit {
     this.test = 'fa fa-android';
   }
 
-  ngOnInit () {
+  ngOnInit() {
     this.character = new Characters();
     this.getCharacterRoute();
   }

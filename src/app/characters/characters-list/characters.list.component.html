@@ -2,28 +2,28 @@
   <h2><i class="fa fa-users"></i>&nbsp;Characters List</h2>
   <table class="table">
     <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Gender</th>
-      <th scope="col">
-        <input id="filter" placeholder="Filter by name..." class="form-control" type="text" name="filter" [(ngModel)]="filter">
-      </th>
-      <th scope="col">
-        <select name="order" class="form-control" id="orderBy" [(ngModel)]="order">
-          <option class="black" value="asc">ASC</option>
-          <option class="black" value="desc">DESC</option>
-        </select>
-      </th>
-    </tr>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">
+          <input id="filter" placeholder="Filter by name..." class="form-control" type="text" name="filter" [(ngModel)]="filter">
+        </th>
+        <th scope="col">
+          <select name="order" class="form-control" id="orderBy" [(ngModel)]="order">
+            <option class="black" value="asc">ASC</option>
+            <option class="black" value="desc">DESC</option>
+          </select>
+        </th>
+      </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let character of characters | filterPipe: filter | orderBy: order">
-      <td>{{ character.name }}</td>
-      <td>{{ character.gender }}</td>
-      <td>
-        <a [routerLink]="['/characters/', splitUrl(character.url) ]">View Details</a>
-      </td>
-    </tr>
+      <tr *ngFor="let character of characters | filterPipe: filter | orderBy: order">
+        <td>{{ character.name }}</td>
+        <td>{{ character.gender }}</td>
+        <td>
+          <a [routerLink]="['/characters/', splitUrl(character.url) ]">View Details</a>
+        </td>
+      </tr>
     </tbody>
   </table>
   <div class="btn-group" role="group" aria-label="Basic example">

@@ -1,9 +1,9 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
-import {Starships} from './starships';
-import {Characters} from '../characters/characters';
+import { Starships } from './starships';
+import { Characters } from '../characters/characters';
 
 @Injectable()
 export class StarshipsService {
@@ -13,7 +13,7 @@ export class StarshipsService {
 
   constructor(
     protected httpClient: HttpClient,
-  ) {}
+  ) { }
 
   getStarships(): Observable<Starships[]> {
     return this.httpClient.get<Array<Starships>>(this.url);

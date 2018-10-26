@@ -1,10 +1,10 @@
-import {Component, OnInit} from '@angular/core';
-import {Starships} from '../starships';
-import {Router} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Starships } from '../starships';
+import { Router } from '@angular/router';
 
-import {StarshipsService} from '../starships.service';
-import {Characters} from '../../characters/characters';
-import {CommonService} from '../../common/common.service';
+import { StarshipsService } from '../starships.service';
+import { Characters } from '../../characters/characters';
+import { CommonService } from '../../common/common.service';
 
 
 @Component({

@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
-import {CommonService} from '../../common/common.service';
-import {MoviesService} from '../movies.service';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { CommonService } from '../../common/common.service';
+import { MoviesService } from '../movies.service';
 
 @Component({
   selector: 'app-movies-detail',

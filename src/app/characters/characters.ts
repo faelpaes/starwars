@@ -1,4 +1,3 @@
-// @ts-ignore
 export class Characters {
   name: String;
   height: String;

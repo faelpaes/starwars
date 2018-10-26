@@ -1,15 +1,15 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import {Planets} from '../planets';
-import {PlanetsService} from '../planets.service';
-import {CommonService} from '../../common/common.service';
+import { Planets } from '../planets';
+import { PlanetsService } from '../planets.service';
+import { CommonService } from '../../common/common.service';
 
 @Component({
   selector: 'app-planets-list',
   templateUrl: 'planets-list.component.html'
 })
 
-export class PlanetsListComponent implements OnInit{
+export class PlanetsListComponent implements OnInit {
   planets: Planets[];
   nextPage: String;
   backPage: String;

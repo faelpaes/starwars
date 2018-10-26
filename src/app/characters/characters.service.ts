@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient  } from '@angular/common/http';
-import {Observable} from 'rxjs/Observable';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 import { Characters } from './characters';
-import {Species} from './species';
+import { Species } from './species';
 
 @Injectable()
 export class CharactersService {
@@ -13,7 +13,7 @@ export class CharactersService {
 
   constructor(
     protected httpClient: HttpClient,
-  ) {}
+  ) { }
 
   getCharacters(): Observable<Characters[]> {
     return this.httpClient.get<Array<Characters>>(this.url);

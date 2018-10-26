@@ -1,3 +1,3 @@
-export class Species{
+export class Species {
   name: String;
 }

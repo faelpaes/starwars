@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CharactersListComponent } from './characters/characters-list/characters.list.component';
@@ -15,13 +15,13 @@ import { StarshipsService } from './starships/starships.service';
 import { StarshipsDetailComponent } from './starships/starships-detail/starships-detail.component';
 import { PlanetsListComponent } from './planets/planets-list/planets-list.component';
 import { PlanetsService } from './planets/planets.service';
-import {PlanetsDetailComponent} from './planets/planets-detail/planets-detail.component';
-import {MoviesService} from './movies/movies.service';
-import {CommonService} from './common/common.service';
-import {FooterComponent} from './footer/footer.component';
-import {MoviesListComponent} from './movies/movies-list/movies.list.component';
-import {MoviesDetailComponent} from './movies/movies-detail/movies-detail.component';
-import {AboutComponent} from './about/about.component';
+import { PlanetsDetailComponent } from './planets/planets-detail/planets-detail.component';
+import { MoviesService } from './movies/movies.service';
+import { CommonService } from './common/common.service';
+import { FooterComponent } from './footer/footer.component';
+import { MoviesListComponent } from './movies/movies-list/movies.list.component';
+import { MoviesDetailComponent } from './movies/movies-detail/movies-detail.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +46,7 @@ import {AboutComponent} from './about/about.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ CharactersService, StarshipsService, PlanetsService, MoviesService, CommonService ],
+  providers: [CharactersService, StarshipsService, PlanetsService, MoviesService, CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

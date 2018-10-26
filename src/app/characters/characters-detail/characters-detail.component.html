@@ -8,61 +8,62 @@
   </h2>
   <table class="table">
     <thead>
-    <tr>
-      <th scope="col">Gender</th>
-      <th scope="col">Birth</th>
-      <th scope="col">Height</th>
-      <th scope="col">Mass</th>
-      <th scope="col">Hair Color</th>
-      <th scope="col">Skin Color</th>
-      <th scope="col">Eye Color</th>
-      <th scope="col">Planet</th>
-      <th scope="col">Films</th>
-    </tr>
+      <tr>
+        <th scope="col">Gender</th>
+        <th scope="col">Birth</th>
+        <th scope="col">Height</th>
+        <th scope="col">Mass</th>
+        <th scope="col">Hair Color</th>
+        <th scope="col">Skin Color</th>
+        <th scope="col">Eye Color</th>
+        <th scope="col">Planet</th>
+        <th scope="col">Films</th>
+      </tr>
     </thead>
     <tbody>
-    <tr>
-      <td>{{ character.gender }}</td>
-      <td>{{ character.birth_year }}</td>
-      <td>{{ character.height }}</td>
-      <td>{{ character.mass }}</td>
-      <td>{{ character.hair_color }}</td>
-      <td>{{ character.skin_color }}</td>
-      <td>{{ character.eye_color  }}</td>
-      <td *ngIf="planet != null"><a [routerLink]="[ '/planets/', splitUrl(planet.url, 'https://swapi.co/api/planets/') ]">{{ planet.name }}</a></td>
-      <td>
-        <span *ngFor="let movie of movies">
-          <a [routerLink]="[ '/films/', splitUrl(movie.url, 'https://swapi.co/api/films/') ]">{{ movie.title }}</a>
-          <br>
-        </span>
-      </td>
-    </tr>
+      <tr>
+        <td>{{ character.gender }}</td>
+        <td>{{ character.birth_year }}</td>
+        <td>{{ character.height }}</td>
+        <td>{{ character.mass }}</td>
+        <td>{{ character.hair_color }}</td>
+        <td>{{ character.skin_color }}</td>
+        <td>{{ character.eye_color }}</td>
+        <td *ngIf="planet != null"><a [routerLink]="[ '/planets/', splitUrl(planet.url, 'https://swapi.co/api/planets/') ]">{{
+            planet.name }}</a></td>
+        <td>
+          <span *ngFor="let movie of movies">
+            <a [routerLink]="[ '/films/', splitUrl(movie.url, 'https://swapi.co/api/films/') ]">{{ movie.title }}</a>
+            <br>
+          </span>
+        </td>
+      </tr>
     </tbody>
   </table>
   <div *ngFor="let specie of species">
     <h3>Specie</h3>
     <table class="table">
       <thead>
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Average Height</th>
-        <th scope="col">Average Lifespan</th>
-        <th scope="col">Classification</th>
-        <th scope="col">Designation</th>
-        <th scope="col">Eye Color</th>
-        <th scope="col">Hair Color</th>
-      </tr>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Average Height</th>
+          <th scope="col">Average Lifespan</th>
+          <th scope="col">Classification</th>
+          <th scope="col">Designation</th>
+          <th scope="col">Eye Color</th>
+          <th scope="col">Hair Color</th>
+        </tr>
       </thead>
       <tbody>
-      <tr>
-        <td>{{ specie.name }}</td>
-        <td>{{ specie.average_height }}</td>
-        <td>{{ specie.average_lifespan }}</td>
-        <td>{{ specie.classification }}</td>
-        <td>{{ specie.designation }}</td>
-        <td>{{ specie.eye_colors }}</td>
-        <td>{{ specie.hair_colors }}</td>
-      </tr>
+        <tr>
+          <td>{{ specie.name }}</td>
+          <td>{{ specie.average_height }}</td>
+          <td>{{ specie.average_lifespan }}</td>
+          <td>{{ specie.classification }}</td>
+          <td>{{ specie.designation }}</td>
+          <td>{{ specie.eye_colors }}</td>
+          <td>{{ specie.hair_colors }}</td>
+        </tr>
       </tbody>
     </table>
   </div>

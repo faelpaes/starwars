@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import {StarshipsService} from '../starships.service';
-import {Starships} from '../starships';
-import {CommonService} from '../../common/common.service';
+import { StarshipsService } from '../starships.service';
+import { Starships } from '../starships';
+import { CommonService } from '../../common/common.service';
 
 @Component({
   selector: 'app-starships-list',

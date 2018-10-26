@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { CharactersService } from '../characters.service';
 import { Characters } from '../characters';
-import {CommonService} from '../../common/common.service';
+import { CommonService } from '../../common/common.service';
 
 @Component({
   selector: 'app-characters',

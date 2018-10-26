@@ -2,27 +2,27 @@
   <h2><i class="fa fa-globe"></i>&nbsp;Planets List</h2>
   <table class="table">
     <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">
-        <input id="filter" placeholder="Filter by name..." class="form-control" type="text" name="filter" [(ngModel)]="filter">
-      </th>
-      <th scope="col">
-        <select name="order" class="form-control" id="orderBy" [(ngModel)]="order">
-          <option class="black" value="asc">ASC</option>
-          <option class="black" value="desc">DESC</option>
-        </select>
-      </th>
-    </tr>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">
+          <input id="filter" placeholder="Filter by name..." class="form-control" type="text" name="filter" [(ngModel)]="filter">
+        </th>
+        <th scope="col">
+          <select name="order" class="form-control" id="orderBy" [(ngModel)]="order">
+            <option class="black" value="asc">ASC</option>
+            <option class="black" value="desc">DESC</option>
+          </select>
+        </th>
+      </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let planet of planets  | filterPipe: filter | orderBy: order">
-      <td>{{ planet.name }}</td>
-      <td>
-        <a [routerLink]="[ '/planets/', splitUrl(planet.url) ]">View Details</a>
-      </td>
-      <td></td>
-    </tr>
+      <tr *ngFor="let planet of planets  | filterPipe: filter | orderBy: order">
+        <td>{{ planet.name }}</td>
+        <td>
+          <a [routerLink]="[ '/planets/', splitUrl(planet.url) ]">View Details</a>
+        </td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <div class="btn-group" role="group" aria-label="Basic example">
@@ -31,4 +31,3 @@
   </div>
 </div>
 <app-footer></app-footer>
-

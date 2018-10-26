@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {CommonService} from '../common/common.service';
+import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../common/common.service';
 
 @Component({
   selector: 'app-footer',

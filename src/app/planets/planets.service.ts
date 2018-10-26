@@ -1,7 +1,8 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import {Planets} from './planets';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+import { Planets } from './planets';
 
 @Injectable()
 export class PlanetsService {
@@ -10,7 +11,7 @@ export class PlanetsService {
 
   constructor(
     protected httpClient: HttpClient,
-  ) {}
+  ) { }
 
   getPlanets(): Observable<Planets[]> {
     return this.httpClient.get<Array<Planets>>(this.url);

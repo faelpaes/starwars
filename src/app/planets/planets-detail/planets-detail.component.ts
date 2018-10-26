@@ -1,11 +1,11 @@
-import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
-import {PlanetsService} from '../planets.service';
-import {Planets} from '../planets';
-import {Characters} from '../../characters/characters';
-import {CharactersService} from '../../characters/characters.service';
-import {CommonService} from '../../common/common.service';
+import { PlanetsService } from '../planets.service';
+import { Planets } from '../planets';
+import { Characters } from '../../characters/characters';
+import { CharactersService } from '../../characters/characters.service';
+import { CommonService } from '../../common/common.service';
 
 @Component({
   selector: 'app-planets-detail',

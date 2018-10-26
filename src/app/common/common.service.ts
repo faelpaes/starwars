@@ -1,11 +1,11 @@
-import {Injectable} from '@angular/core';
-import {arrQuotes} from './quotes.list';
+import { Injectable } from '@angular/core';
+import { arrQuotes } from './quotes.list';
 
 @Injectable()
 export class CommonService {
   value: any;
 
-  constructor() {}
+  constructor() { }
 
   splitUrl(url: string, urlReplace: string) {
     const value = url.replace(urlReplace, '').replace('/', '');
